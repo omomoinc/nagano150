@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>長野県150周年記念 デジタルスタンプラリー</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+                        en: ['"Montserrat"', 'sans-serif'],
+                    },
+                    colors: {
+                        nagano: {
+                            green: '#bfd72b',
+                            dark: '#5a6b12',
+                            light: '#f4f7e1',
+                        },
+                        metal: {
+                            gold: '#ffd700',
+                            silver: '#e0e0e0',
+                            bronze: '#cd7f32',
+                        }
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 8s infinite',
+                        'bounce-slow-delay-1': 'bounce 6s infinite 0.5s',
+                        'bounce-slow-delay-2': 'bounce 7s infinite 1s',
+                        'bounce-slow-delay-3': 'bounce 9s infinite 1.5s',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+      .text-shadow-white {
+        text-shadow: 
+          -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff,
+          -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; 
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-neutral-50 font-sans text-gray-800 tracking-wide">
+
+    <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm z-50">
+        <!-- ヘッダーのパディングを大きくして高さを出す -->
+        <div class="max-w-6xl mx-auto px-4 py-4 md:py-5 grid grid-cols-2 md:grid-cols-3 items-center">
+            <div class="flex items-center justify-start gap-2">
+                <a href="#" class="hover:opacity-80 transition-opacity">
+                    <!-- ヘッダーロゴを拡大 (h-12 md:h-16) -->
+                    <img src="assets/img/150_logo.png" alt="長野県150周年" class="h-12 md:h-16 object-contain"
+                        onerror="this.src='https://placehold.co/150x40?text=Logo'">
+                </a>
+            </div>
+            <!-- グロナビの文字サイズと間隔を拡大 -->
+            <nav class="hidden md:flex justify-center gap-12 text-lg md:text-xl font-bold text-gray-600 w-full">
+                <a href="#how-to" class="hover:text-nagano-dark transition-colors whitespace-nowrap">遊び方</a>
+                <a href="#prizes" class="hover:text-nagano-dark transition-colors whitespace-nowrap">豪華賞品</a>
+                <a href="#mystery" class="hover:text-nagano-dark transition-colors whitespace-nowrap">謎解き</a>
+            </nav>
+            <div class="flex justify-end">
+                <a href="#how-to"
+                    class="bg-orange-500 text-white px-6 md:px-8 py-3 rounded-full font-bold text-base md:text-lg hover:bg-orange-600 transition-colors whitespace-nowrap shadow-sm">
+                    いますぐはじめる
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヘッダーが大きくなった分、padding-topを調整 -->
+    <section
+        class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-nagano-green min-h-[90vh] flex items-center justify-center">
+
+        <div class="absolute inset-0 opacity-20"
+            style="background-image: radial-gradient(#ffffff 2px, transparent 2px); background-size: 24px 24px;"></div>
+
+        <!-- スマホでは見切れないように、PCでは少し内側に配置 -->
+        <div
+            class="absolute top-[15%] left-2 md:top-16 md:left-24 lg:left-40 w-32 md:w-48 lg:w-56 animate-bounce-slow opacity-90 z-0">
+            <img src="assets/img/spot1.png" alt="Spot 1" class="w-full h-auto"
+                onerror="this.src='https://placehold.co/200x200?text=Spot1'">
+        </div>
+        <div
+            class="absolute top-[65%] left-0 md:bottom-12 md:left-28 lg:left-48 w-28 md:w-40 lg:w-48 animate-bounce-slow-delay-1 opacity-90 z-0">
+            <img src="assets/img/spot2.png" alt="Spot 2" class="w-full h-auto"
+                onerror="this.src='https://placehold.co/200x200?text=Spot2'">
+        </div>
+        <div
+            class="absolute top-[25%] right-2 md:top-24 md:right-24 lg:right-40 w-36 md:w-52 lg:w-60 animate-bounce-slow-delay-2 opacity-90 z-0">
+            <img src="assets/img/spot3.png" alt="Spot 3" class="w-full h-auto"
+                onerror="this.src='https://placehold.co/200x200?text=Spot3'">
+        </div>
+        <div
+            class="absolute top-[60%] right-0 md:bottom-20 md:right-28 lg:right-48 w-32 md:w-44 lg:w-52 animate-bounce-slow-delay-3 opacity-90 z-0">
+            <img src="assets/img/spot4.png" alt="Spot 4" class="w-full h-auto"
+                onerror="this.src='https://placehold.co/200x200?text=Spot4'">
+        </div>
+
+        <div class="max-w-5xl w-full mx-auto px-4 relative z-10 flex flex-col items-center pt-10 md:pt-16">
+
+            <!-- キャッチコピー（アニメーションなし、メインロゴの左上に固定配置） -->
+            <div
+                class="hidden md:block absolute md:top-12 lg:top-16 md:left-0 lg:left-8 xl:-left-8 w-44 md:w-52 lg:w-60 z-20">
+                <img src="assets/img/catch_copy.png" alt="全77市町村、約200スポットのスタンプを集めて、豪華賞品をゲットしよう!!!"
+                    class="w-full h-auto mix-blend-multiply" onerror="this.style.display='none'">
+            </div>
+
+            <!-- メインロゴを完全に中央に配置 -->
+            <div class="relative w-full max-w-[1200px] flex justify-center items-center">
+                <!-- メインロゴ -->
+                <div class="relative z-10 w-full max-w-[600px] px-6 md:px-0">
+                    <img src="assets/img/main_logo.png" alt="長野県150周年記念 デジタルスタンプラリー" class="w-full h-auto mx-auto"
+                        onerror="this.src='https://placehold.co/700x450?text=Main+Logo'">
+                </div>
+            </div>
+
+            <div
+                class="mt-12 text-center bg-white/95 backdrop-blur p-8 md:p-10 rounded-[2rem] max-w-lg w-full shadow-2xl">
+                <div
+                    class="inline-block bg-nagano-green/20 text-nagano-dark font-bold px-4 py-1.5 rounded-full text-sm mb-4">
+                    アプリ不要・スマホで完結
+                </div>
+                <p class="text-xl md:text-2xl font-bold text-gray-800 mb-8 leading-tight">
+                    長野県内を巡って<br>豪華賞品を手に入れよう！
+                </p>
+                <a href="#how-to"
+                    class="block w-full bg-orange-500 hover:bg-orange-600 text-white text-xl md:text-2xl font-bold py-5 rounded-2xl transition-colors flex items-center justify-center gap-3">
+                    まずは遊び方をチェック
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="animate-bounce">
+                        <path d="M12 5v14" />
+                        <path d="m19 12-7 7-7-7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-to" class="py-20 md:py-32 bg-white relative">
+        <div class="max-w-5xl mx-auto px-4">
+
+            <div class="text-center mb-20">
+                <p class="font-en text-nagano-green tracking-widest font-bold text-lg mb-2">HOW TO PLAY</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    スタンプラリーの遊び方
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 md:gap-8 relative">
+
+                <div class="text-center relative flex flex-col items-center">
+                    <div class="font-en font-black text-4xl text-gray-200 mb-2">01</div>
+                    <div class="mb-6 w-full rounded-2xl overflow-hidden bg-gray-50">
+                        <img src="assets/img/flow1.png" alt="スポットを見つけよう" class="w-full aspect-[4/3] object-cover"
+                            onerror="this.src='https://placehold.co/400x300?text=Flow+1'">
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">スポットを見つけよう!</h3>
+                    <p class="text-gray-600 text-base leading-relaxed text-left">
+                        まずは、特設サイトのスポット一覧から行ってみたいスポットを見つけましょう！
+                    </p>
+                </div>
+
+                <div class="text-center relative flex flex-col items-center">
+                    <div class="font-en font-black text-4xl text-gray-200 mb-2">02</div>
+                    <div class="mb-6 w-full rounded-2xl overflow-hidden bg-gray-50">
+                        <img src="assets/img/flow2.png" alt="現地に行ってみよう" class="w-full aspect-[4/3] object-cover"
+                            onerror="this.src='https://placehold.co/400x300?text=Flow+2'">
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">現地に行ってみよう!</h3>
+                    <p class="text-gray-600 text-base leading-relaxed text-left">
+                        MAPでスポットの場所を確認して、実際に現地へ足を運んでみましょう！
+                    </p>
+                </div>
+
+                <div class="text-center relative flex flex-col items-center">
+                    <div class="font-en font-black text-4xl text-gray-200 mb-2">03</div>
+                    <div class="mb-6 w-full rounded-2xl overflow-hidden bg-gray-50">
+                        <img src="assets/img/flow3.png" alt="スタンプをGET" class="w-full aspect-[4/3] object-cover"
+                            onerror="this.src='https://placehold.co/400x300?text=Flow+3'">
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">スタンプをGET!!</h3>
+                    <p class="text-gray-600 text-base leading-relaxed text-left">
+                        到着したら、スマートフォンでチェックインしてスタンプを獲得！
+                    </p>
+                </div>
+            </div>
+
+            <!-- いますぐ参加ボタン -->
+            <div class="mt-10 mb-12 text-center">
+                <a href="#"
+                    class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white text-xl md:text-2xl font-bold py-4 px-12 rounded-full transition-colors shadow-lg">
+                    いますぐはじめる
+                </a>
+            </div>
+
+            <!-- 動作環境アラート -->
+            <div
+                class="bg-gray-100 p-6 md:p-8 rounded-2xl max-w-3xl mx-auto flex flex-col md:flex-row items-start gap-4 md:gap-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-gray-400 flex-shrink-0 mt-1">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" x2="12" y1="8" y2="12" />
+                    <line x1="12" x2="12.01" y1="16" y2="16" />
+                </svg>
+                <div class="text-left w-full">
+                    <p class="text-lg font-bold text-gray-900 mb-2">【動作環境について】</p>
+                    <p class="text-base text-gray-600 leading-relaxed font-medium">
+                        iOS13以降、Android10以降で動作を保証しています。<br>
+                        <span class="text-red-500 font-bold">アプリ内ブラウザ（Web View）やシークレットモード・プライベートモードは非対応です。</span><br>
+                        SafariやChromeなどの標準ブラウザで開いてご参加ください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prizes" class="py-20 md:py-32 bg-nagano-green relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20"
+            style="background-image: radial-gradient(#ffffff 2px, transparent 2px); background-size: 24px 24px;"></div>
+
+        <div class="max-w-5xl mx-auto px-4 relative z-10">
+
+            <div class="text-center mb-16 flex flex-col items-center">
+                <p class="font-en text-white tracking-widest font-bold text-lg mb-2 drop-shadow-md">PRIZES</p>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-red-600 text-shadow-white mb-6">
+                    豪華賞品が当たる！
+                </h2>
+                <p
+                    class="text-lg font-bold text-gray-900 bg-white/70 backdrop-blur-sm px-6 py-2.5 rounded-full shadow-sm">
+                    県内各地でスタンプを集めて応募しよう！
+                </p>
+            </div>
+
+            <div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 mb-12">
+
+                    <div
+                        class="flex flex-col relative bg-white p-8 pt-16 rounded-[2rem] shadow-xl hover:shadow-2xl transition-shadow mt-6 md:mt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div
+                                class="bg-[#ffd700] text-yellow-900 font-bold rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-md">
+                                <span class="text-3xl md:text-4xl mb-1">金賞</span>
+                                <span class="text-sm font-medium">3名様</span>
+                            </div>
+                        </div>
+                        <div class="text-center flex flex-col h-full justify-center">
+                            <div class="inline-block text-yellow-800 font-bold text-base md:text-lg mb-4">
+                                5地域以上 + 25個以上のスタンプ
+                            </div>
+                            <h3 class="text-lg md:text-xl font-bold text-gray-900 leading-relaxed">
+                                オリジナル記念品 <span class="text-sm text-gray-500">（10,000円相当）</span><br>
+                                <span class="text-gray-300 font-normal">＋</span><br>
+                                10,000円相当のギフトコード<span class="text-xs align-top text-gray-400">※</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col relative bg-white p-8 pt-16 rounded-[2rem] shadow-xl hover:shadow-2xl transition-shadow mt-6 md:mt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div
+                                class="bg-[#e0e0e0] text-gray-800 font-bold rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-md">
+                                <span class="text-3xl md:text-4xl mb-1">銀賞</span>
+                                <span class="text-sm font-medium">5名様</span>
+                            </div>
+                        </div>
+                        <div class="text-center flex flex-col h-full justify-center">
+                            <div class="inline-block text-gray-600 font-bold text-base md:text-lg mb-4">
+                                3地域以上 + 15個以上のスタンプ
+                            </div>
+                            <h3 class="text-lg md:text-xl font-bold text-gray-900 leading-relaxed">
+                                長野県150周年記念<br>オリジナルトートバッグ<br>
+                                <span class="text-gray-300 font-normal">＋</span><br>
+                                8,000円相当のギフトコード<span class="text-xs align-top text-gray-400">※</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col relative bg-white p-8 pt-16 rounded-[2rem] shadow-xl hover:shadow-2xl transition-shadow mt-6 md:mt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div
+                                class="bg-[#cd7f32] text-white font-bold rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-md">
+                                <span class="text-3xl md:text-4xl mb-1">銅賞</span>
+                                <span class="text-sm font-medium">10名様</span>
+                            </div>
+                        </div>
+                        <div class="text-center flex flex-col h-full justify-center">
+                            <div class="inline-block text-orange-800 font-bold text-base md:text-lg mb-4">
+                                2地域以上 + 10個以上のスタンプ
+                            </div>
+                            <h3 class="text-lg md:text-xl font-bold text-gray-900 leading-relaxed">
+                                長野県150周年記念<br>オリジナルトートバッグ<br>
+                                <span class="text-gray-300 font-normal">＋</span><br>
+                                5,000円相当のギフトコード<span class="text-xs align-top text-gray-400">※</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col relative bg-white p-8 pt-16 rounded-[2rem] shadow-xl hover:shadow-2xl transition-shadow mt-6 md:mt-8">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div
+                                class="bg-[#34d399] text-white font-bold rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-md">
+                                <span class="text-2xl md:text-3xl mb-1">参加賞</span>
+                                <span class="text-xs font-medium">抽選で30名様</span>
+                            </div>
+                        </div>
+                        <div class="text-center flex flex-col h-full justify-center">
+                            <div class="inline-block text-green-700 font-bold text-base md:text-lg mb-4">
+                                5個以上のスタンプ
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 leading-snug">
+                                長野県150周年記念<br>オリジナルトートバッグ
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 特別賞 -->
+                <div class="bg-white p-8 md:p-12 rounded-[2.5rem] text-center mt-8 shadow-xl">
+                    <div class="text-blue-800 font-bold mb-4">
+                        <span class="text-3xl md:text-4xl font-en tracking-widest">特別賞</span>
+                        <span class="text-sm block mt-2 font-medium text-blue-600">（対象者全員）</span>
+                    </div>
+
+                    <div
+                        class="inline-block text-blue-800 bg-blue-50 px-6 py-2 rounded-full font-bold text-sm md:text-base mb-6">
+                        全77市町村それぞれ1箇所以上
+                    </div>
+
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                        長野県150周年<br class="md:hidden">マスター認定証
+                    </h3>
+                    <p class="text-sm text-gray-500 font-medium">デジタル画像データを進呈</p>
+                </div>
+
+                <!-- 注釈テキスト (黒文字・左寄せ) -->
+                <div class="text-sm md:text-base text-gray-800 mt-10 text-left font-bold px-2 md:px-4">
+                    <p>※ 「NAGANOマルシェセレクト」でご利用いただけるコードをお送りします。（送料分を含みます）</p>
+                </div>
+
+                <!-- 応募条件 (黒文字・左寄せ) -->
+                <div class="mt-8 px-2 md:px-4">
+                    <h4 class="font-bold text-gray-900 text-lg mb-3 text-left">
+                        【応募条件について】
+                    </h4>
+                    <p class="text-sm md:text-base text-gray-800 leading-loose font-medium text-left">
+                        ＜金賞の場合＞長野県の10の地域（佐久、上田、諏訪、上伊那、南信州、木曽、松本、北アルプス、長野、北信）の中から5つ以上の地域でそれぞれ1個以上のスタンプを獲得し、かつ合計で25個以上のスタンプを獲得すると抽選へのエントリーが可能となります。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="mystery" class="py-20 md:py-32 bg-[#20222a] text-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <div
+                    class="inline-block bg-yellow-500 text-black font-bold px-8 py-2.5 rounded-full mb-10 text-base md:text-lg">
+                    求ム! 謎解きチャレンジャー!!
+                </div>
+                <img src="assets/img/nazo_logo.png" alt="信州時空探偵団"
+                    class="mx-auto max-w-[550px] md:max-w-[650px] w-full mb-8"
+                    onerror="this.src='https://placehold.co/600x200?text=Nazo+Logo'">
+                <p class="text-lg md:text-xl font-bold tracking-widest text-yellow-500">〜150年の歴史をめぐる<br
+                        class="md:hidden">スタンプ〜</p>
+            </div>
+
+            <div class="bg-[#292c36] rounded-[2.5rem] p-8 md:p-16 shadow-2xl">
+                <div class="flex flex-col md:flex-row gap-12 items-center justify-between">
+                    <div class="flex-1 text-center md:text-left space-y-8">
+                        <p class="text-lg md:text-xl leading-relaxed text-gray-300 font-medium">
+                            追加要素として、<span class="text-green-400 font-bold">LINEを使った<br
+                                    class="md:hidden">謎解きゲーム</span>もご用意！<br>
+                            スタンプを集めながら謎を解いて、<br class="md:hidden">長野県の歴史を楽しく知ろう!!
+                        </p>
+                        <div>
+                            <p class="text-yellow-400 font-bold text-xl md:text-2xl leading-tight mb-3">
+                                時空探偵団の一員として、<br>
+                                謎を解いて長野県を危機から救え!!
+                            </p>
+                            <p class="text-sm text-gray-400 font-medium">※クリア者にはオリジナル認定証をプレゼント!</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-5/12 flex items-center justify-center relative">
+                        <img src="assets/img/nazo.png" alt="謎解きのイメージ"
+                            class="max-w-[280px] w-full object-contain z-10 rounded-xl"
+                            onerror="this.src='https://placehold.co/280x220?text=Nazo'">
+                        <img src="assets/img/miyama.png" alt="キャラクター"
+                            class="absolute -bottom-8 -right-4 max-w-[160px] w-full object-contain z-20"
+                            onerror="this.src='https://placehold.co/180x280?text=Miyama'">
+                    </div>
+                </div>
+
+                <!-- LINE案内と友だち追加ボタン (アイコンを画像に変更) -->
+                <div class="mt-16 pt-12 border-t border-gray-700 text-center">
+                    <p class="text-lg md:text-xl font-bold text-white mb-6">謎解きへの参加は専用LINEアカウントから！</p>
+                    <a href="#"
+                        class="inline-flex items-center justify-center gap-3 bg-[#06C755] hover:bg-[#05b34c] text-white text-xl font-bold py-4 px-10 rounded-full transition-colors shadow-lg">
+                        <img src="assets/img/line.png" alt="LINE" class="w-7 h-7"
+                            onerror="this.src='https://placehold.co/28x28?text=LINE'">
+                        LINE友だち追加はこちら
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-gray-900">さあ、長野県を巡る<br class="md:hidden">旅に出かけよう！</h2>
+            <a href="#"
+                class="inline-block bg-orange-500 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-orange-600 transition-colors shadow-lg">
+                スタンプラリーをはじめる
+            </a>
+
+            <!-- お問い合わせリンク -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <p class="text-gray-600 font-medium mb-4">ご不明な点がある場合はこちら</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfh1r_jIqj-l7FeCPmJk3ixV7MjAqD3LrYa08PauW1BWWO_Ag/viewform?usp=publish-editor"
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 bg-white border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full font-bold hover:bg-gray-50 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    お問い合わせフォーム
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 pt-16 pb-12 text-gray-500 text-sm">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white p-8 md:p-10 rounded-3xl mb-12 shadow-sm">
+                <h4 class="font-bold text-gray-900 text-base mb-6">
+                    注意事項
+                </h4>
+                <ul class="list-disc pl-5 space-y-3 text-xs md:text-sm leading-relaxed font-medium text-gray-600">
+                    <li>アプリのダウンロードは不要です。お手持ちのスマートフォンで簡単にご参加いただけます。</li>
+                    <li>ご参加には、インターネットおよびGPSを利用できるスマートフォンが必要です。</li>
+                    <li>謎解きにご参加の場合は、最新のスマートフォン版LINEアプリが必要です。</li>
+                    <li>動作環境の詳細はイベント特設サイトでご確認ください。本イベント参加にかかる通信費は参加者のご負担となります。</li>
+                    <li>歩きスマホは大変危険ですので、画面を見る際は必ず立ち止まってください。</li>
+                    <li>私有地や立ち入り禁止区域への進入は固くお断りします。周囲の方の迷惑にならないようマナーを守ってご参加ください。</li>
+                    <li>イベント内容は予告なく変更または中止する場合があります。</li>
+                    <li>端末の故障や不具合によるデータ消失に関する責任は負いかねます。</li>
+                    <li>当選者の発表は、賞品の発送をもって代えさせていただきます。</li>
+                </ul>
+            </div>
+
+            <div class="text-center space-y-3">
+                <p class="font-bold text-gray-600">主催：長野県（県民文化部県民政策課）</p>
+                <p class="font-medium text-gray-500">企画制作：信濃毎日新聞社 / 株式会社OMOMO</p>
+                <p class="mt-8 font-en tracking-wider font-medium text-gray-400">&copy; 2026 Nagano Prefecture. All
+                    rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
